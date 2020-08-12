@@ -68,3 +68,13 @@ function to($url)
     header("location:$url");
 }
 if (empty($_SESSION['ani'])) $_SESSION['ani'] = 1;
+
+$Poster=new DB('poster');
+$Ord=new DB('ord');
+$Movie=new DB('movie');
+$level=[
+"1"=>"普遍級",
+"2"=>"保護級",
+"3"=>"輔導級",
+    "4"=>"限制級",
+];
