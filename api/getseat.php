@@ -1,11 +1,12 @@
 <?php
 include_once "../base.php";
 $seat=[];
-$movies = $Ord->find(['name' => $_POST['name'], 'date' => $_POST['date'], 'session' => $_POST['session']]);
+$movies = $Ord->all(['name' => $_POST['name'], 'date' => $_POST['date'], 'session' => $_POST['session']]);
 if (!empty($movies)) {
         foreach ($movies as $m) {
                 $seat = array_merge($seat,unserialize($m['seat']));
         }
+        // print_r($seat);
 }
 for ($i = 1; $i <= 20; $i++) {
 if(in_array($i,$seat)){

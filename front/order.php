@@ -86,8 +86,8 @@
             "seat":seat,
             "qt":ticket
         }, function(res) {
-// location.href=`?do=result&no=${res}`;
-console.log(res);
+location.href=`?do=result&no=${res}`;
+// console.log(res);
         })
     }
 

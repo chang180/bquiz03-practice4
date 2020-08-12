@@ -33,7 +33,7 @@ foreach($ords as $o){
         <td><?=$o['no'];?></td>
         <td><?=$o['name'];?></td>
         <td><?=$o['date'];?></td>
-        <td><?=$sess[$o['session']];?></td>
+        <td><?=$o['session'];?></td>
         <td><?=$o['qt'];?></td>
         <td><?php
         $seats=unserialize($o['seat']);
