@@ -13,7 +13,7 @@
                     <div class="butt" style="display:flex">
                         <button onclick="pp(1)">&#9664;</button>
                         <?php
-                        $posters = $Poster->all(['sh' => 1]);
+                        $posters = $Poster->all(['sh' => 1]," ORDER BY rank DESC");
                         foreach ($posters as $key => $p) {
                             echo "<div id='ssaa" . $key . "' onclick='change($key)' class='im'><img src='img/" . $p['img'] . "' style='height:80px;width:68px'>
 <br>
